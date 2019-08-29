@@ -26,4 +26,21 @@ public class FinderTest {
             assertEquals(new Integer(1), x.findMin(array2));
             assertEquals(new Integer(114), x.findMin(array3));
         }
+        @Test
+        public void test_NullMaxArray() {
+            Finder x = new Finder();
+            assertNull(x.findMax(null));
+
+            int[] emptyArray = {};
+            assertNull(x.findMax(emptyArray));
+
+        }
+        @Test
+        public void test_NullMinArray() {
+            Finder x = new Finder();
+            assertNull(x.findMin(null));
+
+            int[] emptyArray = {};
+            assertNull(x.findMin(emptyArray));
+        }
 }
